@@ -1,14 +1,15 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import People from './components/People.vue'
+import Person from './components/Person.vue'
 </script>
 
 <template>
-  <div class="flex w-full h-full justify-center items-center">
-    <HelloWorld msg="Hello Vue 3 + Vite" />
-  </div>
-  
+  <Header />
+  <div class="flex w-full h-full justify-center items-center p-16">
+    <People />   
+    <!-- <Person msg="Hello Happy People" /> -->
+  </div>  
 </template>
 
 <style>
@@ -16,8 +17,8 @@ import HelloWorld from './components/HelloWorld.vue'
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  background-color: whitesmoke;
   color: #2c3e50;
-  margin-top: 60px;
+  padding-top: 12px;
 }
 </style>
