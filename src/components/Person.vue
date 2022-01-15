@@ -8,7 +8,7 @@ const props = defineProps({
 const person = props.person
 const photoUrl = 'background-image: url(' + props.person.Photo + ');'
 
-console.log('log:', attention )
+// console.log('log:', attention )
 </script>
 
 <template>

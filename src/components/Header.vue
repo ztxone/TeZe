@@ -11,7 +11,7 @@ import { Icon } from '@iconify/vue'
 
     <div class="sort flex items-center space-x-12 h-full">
       <div class="flex flex-nowrap space-x-4">
-        <Icon class="w-6 h-6" icon="radix-icons:view-vertical" />
+        <Icon class="w-6 h-6 text-blue-500" icon="radix-icons:view-vertical" />
         <Icon class="w-6 h-6" icon="radix-icons:view-horizontal" />
         <Icon class="w-6 h-6" icon="radix-icons:view-grid" />
       </div>
@@ -21,12 +21,12 @@ import { Icon } from '@iconify/vue'
       <div class="flex flex-nowrap space-x-4">
         <span class="relative">
           <Icon class="w-6 h-6" icon="codicon:filter-filled" />
-          <div class="absolute -top-1 -right-1 bg-red-500 badge badge-xs"></div>
+          <div class="absolute -top-1 -right-1  w-3 h-3 rounded-full bg-red-500"></div>
         </span>
         
         <span class="relative">
           <Icon class="w-6 h-6" icon="fluent:arrow-sort-20-filled" />
-          <div class="absolute -top-1 -right-1 bg-red-500 badge badge-xs"></div>
+          <div class="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-red-500"></div>
         </span>
       </div>        
     </div>
