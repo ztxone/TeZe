@@ -11,21 +11,21 @@ import { Icon } from '@iconify/vue'
 
     <div class="sort flex items-center space-x-12 h-full">
       <div class="flex flex-nowrap space-x-4">
-        <Icon class="w-6 h-6 text-blue-500" icon="radix-icons:view-vertical" />
-        <Icon class="w-6 h-6" icon="radix-icons:view-horizontal" />
-        <Icon class="w-6 h-6" icon="radix-icons:view-grid" />
+        <Icon class="w-6 h-6 text-blue-500 cursor-pointer" icon="radix-icons:view-vertical" />
+        <Icon class="w-6 h-6 hover:text-blue-500 cursor-pointer" icon="radix-icons:view-horizontal" />
+        <Icon class="w-6 h-6 hover:text-blue-500 cursor-pointer" icon="radix-icons:view-grid" />
       </div>
       <div class="flex">
         <input class="rounded-xl px-4 border-2 border-gray-400" type="search" placeholder="search here">
       </div>
       <div class="flex flex-nowrap space-x-4">
         <span class="relative">
-          <Icon class="w-6 h-6" icon="codicon:filter-filled" />
+          <Icon class="w-6 h-6 hover:text-blue-500 cursor-pointer" icon="codicon:filter-filled" />
           <div class="absolute -top-1 -right-1  w-3 h-3 rounded-full bg-red-500"></div>
         </span>
         
         <span class="relative">
-          <Icon class="w-6 h-6" icon="fluent:arrow-sort-20-filled" />
+          <Icon class="w-6 h-6 hover:text-blue-500 cursor-pointer" icon="fluent:arrow-sort-20-filled" />
           <div class="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-red-500"></div>
         </span>
       </div>        

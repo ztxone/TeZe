@@ -38,17 +38,17 @@ const photoUrl = 'background-image: url(' + props.person.Photo + ');'
       </div>
 
       <div class="attention">
-
         <div class="w-full flex justify-between items-center">
           <span>Attention</span>
           <span>48h</span>
         </div>
-
-
-        <div class="relative h-4 bg-yellow-300 rounded-xl overflow-hidden">
-          <span class="absolute top-0 left-0 block w-2/3 h-full bg-violet-400 rounded-xl"></span>
-          <span class="absolute top-0 left-0 block w-1/3 h-full bg-red-400 rounded-xl"></span>
-        </div>
+        <div v-if="person.Attention !== null" class="relative flex h-4 bg-yellow-200 rounded-xl overflow-hidden">
+          <span v-for="attention in person.Attention" :key="person.Id" 
+            class="block h-full rounded-r-xl -ml-2"
+            :style="'width:' + attention.Amount + '%;background-color:#'+ attention.Color + ';'">
+          </span> 
+        </div>        
+        <div v-else class="relative h-4 bg-yellow-200 rounded-xl overflow-hidden"></div>
       </div>
 
       <div class="params grid grid-cols-2 gap-2 h-[40%] p-4">
