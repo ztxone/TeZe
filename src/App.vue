@@ -1,7 +1,6 @@
 <script setup>
 import Header from './components/Header.vue'
 import People from './components/People.vue'
-import Person from './components/Person.vue'
 </script>
 
 <template>
