@@ -50,11 +50,11 @@ const photoUrl = 'background-image: url(' + props.person.Photo + ');'
 
         <div class="relative w-full h-full flex items-center justify-end">
           <span class="px-2 z-10">15%</span>
-          <div class="absolute flex w-[40%] min-w-[1%] h-full bg-red-400 rounded-xl"></div>
+          <div class="flex w-[40%] min-w-[1%] h-full bg-red-400 rounded-xl"></div>
         </div>
 
         <div class="relative w-full h-full flex items-center justify-start">          
-          <div class="absolute left-0 flex w-[20%] min-w-[1%] h-full bg-amber-400 rounded-xl"></div>
+          <div class="flex w-[20%] min-w-[1%] h-full bg-amber-400 rounded-xl"></div>
           <span class="px-2 z-10">12%</span>
         </div>
 
