@@ -19,9 +19,7 @@ const getPeople = async () => {
       return data
     })
     .catch(error => { console.log(error) })
-    
 }
-
 
 onMounted(getPeople())
 console.log(people)
@@ -30,11 +28,10 @@ console.log(people)
 <template>
   <div class="flex flex-wrap justify-center gap-12">
     <Person v-for="person in people" :key="person.Id" :person="person" />
-
-
-    <p v-if="loading">
-    Still loading..
-    </p>
+    <div v-if="loading" class="flex flex-col items-center">
+      <span>Data is loading...</span>      
+      <span><img src="../assets/img/Spheres dance.gif" alt=""></span>
+    </div>
   </div>
 </template>
 

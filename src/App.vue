@@ -6,13 +6,12 @@ import People from './components/People.vue'
 <template>
   <Header />
   <div class="flex w-full h-full justify-center items-center p-16">
-    <People />   
-    <!-- <Person msg="Hello Happy People" /> -->
+    <People />
   </div>  
 </template>
 
 <style>
-#app {
+body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
