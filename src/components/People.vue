@@ -2,7 +2,6 @@
 import { ref, onMounted } from 'vue'
 import Person from './Person.vue'
 
-
 const url = 'https://api.interview.dev-team.club/people'
 const options = { 
   method: 'GET',
@@ -18,21 +17,28 @@ const getPeople = async () => {
       loading.value = false
       return data
     })
-    .catch(error => { console.log(error) })
+    .catch(error => { console.log(error.message) })
 }
+const emits = defineEmits({
+  personCliked: String
+})
 
 onMounted(getPeople())
-console.log(people)
+
+const personCliked = (person) => { 
+  emits('personCliked', person)
+}
 </script>
 
 <template>
-  <div class="flex flex-wrap justify-center gap-12">
-    <Person v-for="person in people" :key="person.Id" :person="person" />
-    <div v-if="loading" class="flex flex-col items-center">
+  <div class="flex flex-wrap justify-center gap-12 ">
+    <Person v-for="person in people" :key="person.Id" 
+      :person="person"
+      @click="personCliked(person)"
+    />
+    <div v-if="loading" class="flex flex-col items-center" >
       <span>Data is loading...</span>      
       <span><img src="../assets/img/Spheres dance.gif" alt=""></span>
     </div>
   </div>
 </template>
-
-
