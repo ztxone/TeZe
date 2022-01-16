@@ -38,7 +38,7 @@ const personCliked = (person) => {
     />
     <div v-if="loading" class="flex flex-col items-center" >
       <span>Data is loading...</span>      
-      <span><img src="../assets/img/Spheres dance.gif" alt=""></span>
+      <span><img src="../assets/img/Spheresdance.gif" alt="loading gif"></span>
     </div>
   </div>
 </template>
