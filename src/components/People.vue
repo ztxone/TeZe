@@ -31,14 +31,12 @@ const personCliked = (person) => {
 </script>
 
 <template>
-  <div class="flex flex-wrap justify-center gap-12 ">
-    <Person v-for="person in people" :key="person.Id" 
-      :person="person"
-      @click="personCliked(person)"
-    />
-    <div v-if="loading" class="flex flex-col items-center" >
-      <span>Data is loading...</span>      
-      <span><img src="../assets/img/Spheresdance.gif" alt="loading gif"></span>
-    </div>
+  <Person v-for="person in people" :key="person.Id" 
+    :person="person"
+    @click="personCliked(person)"
+  />
+  <div v-if="loading" class="flex flex-col items-center" >
+    <span>Data is loading...</span>      
+    <span><img src="../assets/img/Spheresdance.gif" alt="loading gif"></span>
   </div>
 </template>

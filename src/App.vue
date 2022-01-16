@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watchEffect } from 'vue'
 import Header from './components/Header.vue'
 import People from './components/People.vue'
 import Person from './components/Person.vue'
@@ -10,23 +10,28 @@ const handleClick = (e) => {
   clickedPerson.value = e
   showPerson.value = true
 }
-
+watchEffect(() => {
+    document.body.style.overflow = showPerson.value ? 'hidden' : ''
+  }
+)
 </script>
 
 <template>
-<main class="bg-gray-100 pt-2 " >
   <Header />
-  <div class="flex w-full h-full justify-center items-center p-16" :class="showPerson ? 'fixed' : '' ">
-    <People @personCliked="handleClick" />
+  <main class="relative min-w-[375px]">  
+    <div class="flex flex-wrap w-full h-full justify-center items-center gap-12 p-16"
+      >
+      <People @personCliked="handleClick" />
+    </div>    
+  </main>
+  <div v-if="showPerson" class="fixed top-0 left-0 right-0 bottom-0 bg-black/60 backdrop-blur z-20 overflow-hidden flex justify-center items-center transition-all duration-400" @click.self="showPerson = false">
+    <Person :person="clickedPerson" />        
   </div>
-    <div v-if="showPerson" class="fixed w-full h-full top-0 left-0 right-0 bottom-0 bg-black/60 backdrop-blur z-20 overflow-hidden flex justify-center items-center transition-all duration-400" @click.self="showPerson = false">
-        <Person :person="clickedPerson" />        
-    </div>
-</main>
 </template>
 
 <style>
 body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  background-color: rgb(243 244 246);
 }
 </style>
