@@ -24,7 +24,7 @@ watchEffect(() => {
       <People @personCliked="handleClick" />
     </div>    
   </main>
-  <div v-if="showPerson" class="fixed top-0 left-0 right-0 bottom-0 bg-black/60 backdrop-blur z-20 overflow-hidden flex justify-center items-center transition-all duration-400" @click.self="showPerson = false">
+  <div v-if="showPerson" class="fixed top-0 left-0 right-0 bottom-0 bg-black/60 backdrop-blur z-20 flex justify-center items-center" @click.self="showPerson = false">
     <Person :person="clickedPerson" />        
   </div>
 </template>
